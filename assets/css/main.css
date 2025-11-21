@@ -701,6 +701,22 @@ main {
    UTILITY CLASSES
    ============================================ */
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-bg-white);
+  padding: var(--spacing-sm);
+  text-decoration: none;
+  z-index: 100;
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -786,5 +802,113 @@ main {
 @media (min-width: 1440px) {
   :root {
     --container-max-width: 1400px;
+  }
+}
+
+/* ============================================
+   MOBILE OPTIMIZATIONS (360-480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-h1: 1.75rem;      /* 28px */
+    --font-size-h2: 1.4rem;      /* 22.4px */
+    --container-padding: 1rem;
+  }
+
+  .hero {
+    padding: var(--spacing-xl) var(--container-padding);
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .section {
+    padding: var(--spacing-xl) var(--container-padding);
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+  }
+
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  .contact-item {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .contact-item strong {
+    min-width: auto;
+  }
+
+  .hours-grid {
+    padding: var(--spacing-md);
+  }
+
+  .hours-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+
+/* Improve focus visibility for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast */
+.btn-white:focus-visible {
+  outline-color: var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid var(--color-text);
+  }
+
+  .btn {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
