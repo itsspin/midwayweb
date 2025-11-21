@@ -9,16 +9,44 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <!-- Header - Insert from templates/header.html -->
-  <!-- TODO: Replace this section with the actual header markup from midwayfordtruck.com -->
+  
+  <!-- Header -->
   <header id="site-header" class="site-header">
-    <!-- Header content will be inserted here -->
-    <!-- Copy the complete header markup from the live site homepage -->
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <a href="/" class="header-logo">
+            <span class="logo-icon">🏠</span>
+            <span class="logo-text">Midway Ford Truck Center</span>
+          </a>
+          <div class="header-contact">
+            <a href="tel:+18005982285" class="header-phone">(800) 598-2285</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/new-trucks">New</a></li>
+          <li><a href="/used-trucks">Used</a></li>
+          <li><a href="/work-ready-trucks">Work Ready Trucks</a></li>
+          <li><a href="/finance">Finance</a></li>
+          <li><a href="/service-parts">Service & Parts</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
   </header>
 
   <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
+      <div class="hero-background-image" style="background-image: url('assets/img/ford-pro-elite-hero.jpg');" aria-hidden="true"></div>
       <div class="container">
         <div style="margin-bottom: var(--spacing-md);">
           <span class="pill pill-white" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3);">Ford Pro Elite</span>
@@ -39,6 +67,7 @@
         <p class="section-intro">Our Ford Pro Elite Commercial Center designation means we've met Ford's highest standards for commercial vehicle service. We're equipped and staffed specifically to serve commercial fleets with the expertise, facilities, and commitment to uptime your business demands.</p>
         <div class="card-grid">
           <div class="card">
+            <div class="card-icon" aria-hidden="true">⚡</div>
             <div style="margin-bottom: var(--spacing-sm);">
               <span class="pill pill-primary">Uptime Focus</span>
             </div>
@@ -46,6 +75,7 @@
             <p>Every aspect of our operation is designed around maximizing your fleet's uptime. Rapid turnaround times, priority scheduling for commercial customers, and service programs tailored to minimize vehicle downtime and keep your business productive.</p>
           </div>
           <div class="card">
+            <div class="card-icon" aria-hidden="true">🚛</div>
             <div style="margin-bottom: var(--spacing-sm);">
               <span class="pill pill-primary">Large Vehicles</span>
             </div>
@@ -53,6 +83,7 @@
             <p>Our facility accommodates upfits, service bodies, cranes, RVs, and other large commercial vehicles. Spacious service bays and specialized equipment ensure we can handle the full range of your fleet's service needs, from standard maintenance to complex repairs.</p>
           </div>
           <div class="card">
+            <div class="card-icon" aria-hidden="true">🕐</div>
             <div style="margin-bottom: var(--spacing-sm);">
               <span class="pill pill-primary">Extended Access</span>
             </div>
@@ -60,6 +91,7 @@
             <p>We understand commercial operations don't stop on weekends. Our extended hours and 7-day-a-week availability ensure your fleet can get service when it's convenient for your business, minimizing disruption to your operations.</p>
           </div>
           <div class="card">
+            <div class="card-icon" aria-hidden="true">👨‍🔧</div>
             <div style="margin-bottom: var(--spacing-sm);">
               <span class="pill pill-primary">Expert Technicians</span>
             </div>
@@ -211,11 +243,42 @@
     </section>
   </main>
 
-  <!-- Footer - Insert from templates/footer.html -->
-  <!-- TODO: Replace this section with the actual footer markup from midwayfordtruck.com -->
+  <!-- Footer -->
   <footer id="site-footer" class="site-footer">
-    <!-- Footer content will be inserted here -->
-    <!-- Copy the complete footer markup from the live site homepage -->
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Midway Ford Truck Center</h4>
+          <p>7601 NE 38th Street<br>Kansas City, MO 64161</p>
+          <p><a href="tel:+18005982285">(800) 598-2285</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/new-trucks">New Trucks</a></li>
+            <li><a href="/used-trucks">Used Trucks</a></li>
+            <li><a href="/service-parts">Service & Parts</a></li>
+            <li><a href="/finance">Finance</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="light-truck-service.html">Light Truck Service</a></li>
+            <li><a href="heavy-truck-service.html">Heavy Truck Service</a></li>
+            <li><a href="ford-pro-elite-commercial-center.html">Ford Pro Elite</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Hours</h4>
+          <p>Monday - Friday: 6:00 AM - 8:00 PM<br>
+          Saturday - Sunday: 7:00 AM - 7:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Midway Ford Truck Center. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="assets/js/main.js" defer></script>
