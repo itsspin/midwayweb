@@ -17,67 +17,139 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero">
       <div class="container">
         <h1>Light Truck Service & Repair</h1>
         <p class="hero-subtitle">Expert Service for Your Ford Light Truck in Kansas City</p>
+        <div class="hero-cta">
+          <a href="tel:+1234567890" class="btn btn-white">Schedule Service</a>
+          <a href="#services" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="stat-grid">
+          <div class="stat-item">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Certified Technicians</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15</div>
+            <div class="stat-label">Service Bays</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">7</div>
+            <div class="stat-label">Days a Week</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Genuine Parts</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Services Overview -->
-    <section class="services-section">
+    <section id="services" class="section section-light">
       <div class="container">
         <h2>Our Light Truck Services</h2>
-        <div class="services-grid">
-          <div class="service-card">
+        <p class="section-intro">Comprehensive service and repair for Ford F-150, F-250, F-350, and all light commercial trucks. Factory-trained technicians using genuine Ford parts.</p>
+        <div class="card-grid">
+          <div class="card">
             <h3>Routine Maintenance</h3>
-            <p>Regular oil changes, tire rotations, and inspections to keep your truck running smoothly.</p>
+            <p>Regular oil changes, tire rotations, and inspections to keep your truck running smoothly and efficiently.</p>
           </div>
-          <div class="service-card">
+          <div class="card">
             <h3>Engine Service</h3>
-            <p>Expert diagnosis and repair for all engine-related issues.</p>
+            <p>Expert diagnosis and repair for all engine-related issues, from minor tune-ups to major overhauls.</p>
           </div>
-          <div class="service-card">
+          <div class="card">
             <h3>Transmission Service</h3>
-            <p>Complete transmission maintenance and repair services.</p>
+            <p>Complete transmission maintenance, repair, and rebuild services for automatic and manual transmissions.</p>
           </div>
-          <div class="service-card">
+          <div class="card">
             <h3>Brake Service</h3>
-            <p>Brake inspection, repair, and replacement using quality parts.</p>
+            <p>Brake inspection, repair, and replacement using quality parts to ensure your safety on the road.</p>
           </div>
-          <div class="service-card">
+          <div class="card">
             <h3>Electrical Systems</h3>
-            <p>Diagnosis and repair of electrical and electronic systems.</p>
+            <p>Diagnosis and repair of electrical and electronic systems, including wiring, batteries, and alternators.</p>
           </div>
-          <div class="service-card">
+          <div class="card">
             <h3>HVAC Service</h3>
-            <p>Heating, ventilation, and air conditioning system service.</p>
+            <p>Heating, ventilation, and air conditioning system service to keep you comfortable year-round.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section class="features-section">
+    <section class="section section-alt">
       <div class="container">
         <h2>Why Choose Midway Ford Truck Center</h2>
         <ul class="features-list">
-          <li>Factory-trained Ford technicians</li>
-          <li>Genuine Ford parts and accessories</li>
-          <li>State-of-the-art diagnostic equipment</li>
-          <li>Convenient scheduling and service hours</li>
-          <li>Competitive pricing and transparent estimates</li>
+          <li>Factory-trained Ford technicians with specialized light truck expertise</li>
+          <li>Genuine Ford parts and accessories for optimal performance and warranty protection</li>
+          <li>State-of-the-art diagnostic equipment for accurate problem identification</li>
+          <li>Convenient scheduling and extended service hours to fit your schedule</li>
+          <li>Competitive pricing and transparent estimates with no hidden fees</li>
+          <li>Quick turnaround times to minimize your vehicle downtime</li>
         </ul>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- Hours & Contact -->
+    <section class="section section-light">
       <div class="container">
-        <h2>Schedule Your Service Today</h2>
-        <p>Contact us to schedule an appointment or learn more about our light truck services.</p>
-        <a href="tel:+1234567890" class="cta-button">Call Now</a>
-        <a href="/contact" class="cta-button secondary">Schedule Online</a>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Service Hours</h3>
+            <div class="hours-grid">
+              <div class="hours-row">
+                <span class="hours-day">Monday - Friday</span>
+                <span class="hours-time">7:00 AM - 6:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Saturday</span>
+                <span class="hours-time">8:00 AM - 4:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Sunday</span>
+                <span class="hours-time closed">Closed</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+              <strong>Phone:</strong>
+              <a href="tel:+1234567890">(816) 555-0123</a>
+            </div>
+            <div class="contact-item">
+              <strong>Email:</strong>
+              <a href="mailto:service@midwayfordtruck.com">service@midwayfordtruck.com</a>
+            </div>
+            <div class="contact-item">
+              <strong>Address:</strong>
+              <span>1234 Truck Center Way, Kansas City, MO 64108</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: white;">
+      <div class="container text-center">
+        <h2 style="color: white; margin-bottom: var(--spacing-md);">Schedule Your Service Today</h2>
+        <p style="color: rgba(255,255,255,0.95); margin-bottom: var(--spacing-lg); font-size: 1.125rem;">Contact us to schedule an appointment or learn more about our light truck services.</p>
+        <div class="btn-group">
+          <a href="tel:+1234567890" class="btn btn-white">Call Now</a>
+          <a href="/contact" class="btn btn-secondary" style="background: transparent; color: white; border-color: white;">Schedule Online</a>
+        </div>
       </div>
     </section>
   </main>
@@ -92,4 +164,3 @@
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
-
