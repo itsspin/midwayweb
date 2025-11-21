@@ -404,6 +404,29 @@ a:hover {
   margin: 0 auto var(--spacing-lg);
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero-grid .hero-subtitle {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero-grid .btn-group {
+  justify-content: flex-start;
+}
+
 /* --- Forms --- */
 .service-form {
   background-color: var(--color-bg-white);
