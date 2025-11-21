@@ -649,3 +649,17 @@ a:hover {
     max-width: 1200px;
   }
 }
+
+/* Schedule Appointment Iframe */
+#schedule-appointment iframe {
+  width: 100%;
+  min-height: 600px;
+  border: none;
+  background-color: var(--color-bg-white);
+}
+
+@media (max-width: 767px) {
+  #schedule-appointment iframe {
+    min-height: 800px;
+  }
+}
