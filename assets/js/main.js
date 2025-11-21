@@ -63,15 +63,64 @@
     });
   }
 
+  // Theme Switcher
+  function initThemeSwitcher() {
+    // Create theme switcher UI
+    const switcher = document.createElement('div');
+    switcher.className = 'theme-switcher';
+    switcher.innerHTML = `
+      <div class="theme-switcher-label">Design</div>
+      <button class="theme-btn active" data-theme="default">Light Professional</button>
+      <button class="theme-btn" data-theme="warm">Warm Gray</button>
+      <button class="theme-btn" data-theme="cool">Cool Blue Gray</button>
+      <button class="theme-btn" data-theme="texture">Subtle Texture</button>
+    `;
+    document.body.appendChild(switcher);
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('midway-theme') || 'default';
+    if (savedTheme !== 'default') {
+      document.body.classList.add('theme-' + savedTheme);
+      switcher.querySelector(`[data-theme="${savedTheme}"]`).classList.add('active');
+      switcher.querySelector('[data-theme="default"]').classList.remove('active');
+    }
+
+    // Handle theme switching
+    switcher.querySelectorAll('.theme-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const theme = this.getAttribute('data-theme');
+        
+        // Remove all theme classes
+        document.body.classList.remove('theme-warm', 'theme-cool', 'theme-texture');
+        
+        // Remove active class from all buttons
+        switcher.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+        
+        // Apply new theme
+        if (theme !== 'default') {
+          document.body.classList.add('theme-' + theme);
+        }
+        
+        // Update active button
+        this.classList.add('active');
+        
+        // Save to localStorage
+        localStorage.setItem('midway-theme', theme);
+      });
+    });
+  }
+
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       initMobileMenu();
       initSmoothScroll();
+      initThemeSwitcher();
     });
   } else {
     initMobileMenu();
     initSmoothScroll();
+    initThemeSwitcher();
   }
 
 })();
