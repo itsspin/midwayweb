@@ -650,16 +650,55 @@ a:hover {
   }
 }
 
-/* Schedule Appointment Iframe */
-#schedule-appointment iframe {
-  width: 100%;
-  min-height: 600px;
-  border: none;
-  background-color: var(--color-bg-white);
+/* Schedule Appointment Section */
+#schedule-appointment {
+  background: linear-gradient(to bottom, var(--color-bg-alt) 0%, var(--color-bg-white) 100%);
+}
+
+#scheduler-container {
+  position: relative;
+  background: var(--color-bg-white);
+}
+
+#scheduler-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-bg-white);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#scheduler-iframe {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 767px) {
-  #schedule-appointment iframe {
-    min-height: 800px;
+  #schedule-appointment .page-container > div > div {
+    padding: var(--spacing-lg) !important;
+  }
+  
+  #schedule-appointment h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  #schedule-appointment .btn-group .btn {
+    min-width: 100% !important;
+    font-size: 1.125rem !important;
+  }
+  
+  #scheduler-container {
+    min-height: 600px;
+  }
+  
+  #scheduler-iframe {
+    min-height: 600px !important;
+    height: 600px !important;
   }
 }

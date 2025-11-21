@@ -171,15 +171,52 @@
           <h2>Schedule Your Service Appointment</h2>
           <p class="section-intro" style="max-width: 600px; margin: 0 auto;">Use our online scheduler to book your service appointment quickly and easily.</p>
         </div>
-        <div style="max-width: 100%; margin: 0 auto; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md);">
+        
+        <!-- Embedded Scheduler Container -->
+        <div id="scheduler-container" style="max-width: 100%; margin: 0 auto; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-lg); background: var(--color-bg-white); min-height: 800px; position: relative;">
+          <!-- Loading State -->
+          <div id="scheduler-loading" class="text-center" style="padding: var(--spacing-2xl);">
+            <div style="font-size: 2rem; margin-bottom: var(--spacing-md);">⏳</div>
+            <p style="color: var(--color-text-light); margin-bottom: var(--spacing-lg);">Loading appointment scheduler...</p>
+          </div>
+          
+          <!-- Iframe for Scheduler -->
           <iframe 
+            id="scheduler-iframe"
             src="https://www.midwayfordtruck.com/workstiming.htm" 
             width="100%" 
-            height="800" 
+            height="1000" 
             frameborder="0" 
-            style="display: block; min-height: 600px;"
-            title="Schedule Service Appointment">
+            scrolling="yes"
+            allow="fullscreen"
+            allowfullscreen
+            style="display: none; min-height: 800px; border: none; width: 100%;"
+            title="Schedule Service Appointment"
+            onload="handleSchedulerLoad()"
+            onerror="handleSchedulerError()">
           </iframe>
+          
+          <!-- Fallback if iframe fails -->
+          <div id="scheduler-fallback" style="display: none; padding: var(--spacing-2xl); text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">📅</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: var(--spacing-md); color: var(--color-primary);">Schedule Your Appointment</h3>
+            <p style="font-size: 1.125rem; margin-bottom: var(--spacing-xl); color: var(--color-text-light); max-width: 600px; margin-left: auto; margin-right: auto;">
+              Click the button below to access our online appointment scheduler.
+            </p>
+            <div class="btn-group" style="justify-content: center; margin-top: var(--spacing-lg);">
+              <a href="https://www.midwayfordtruck.com/workstiming.htm" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 1.25rem; padding: 1rem 2.5rem; min-width: 280px;">
+                Open Appointment Scheduler →
+              </a>
+            </div>
+            <div style="margin-top: var(--spacing-lg); padding-top: var(--spacing-lg); border-top: 1px solid var(--color-border);">
+              <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">
+                <strong>Prefer to schedule by phone?</strong>
+              </p>
+              <a href="tel:+18164553701" class="btn btn-secondary" style="margin-top: var(--spacing-sm);">
+                Call (816) 455-3701
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -63,15 +63,74 @@
     });
   }
 
+  // Scheduler iframe handling
+  function initScheduler() {
+    const iframe = document.getElementById('scheduler-iframe');
+    const loading = document.getElementById('scheduler-loading');
+    const fallback = document.getElementById('scheduler-fallback');
+    
+    if (!iframe || !loading || !fallback) return;
+    
+    // Set timeout to show fallback if iframe doesn't load
+    const loadTimeout = setTimeout(function() {
+      if (loading && loading.style.display !== 'none') {
+        loading.style.display = 'none';
+        iframe.style.display = 'none';
+        fallback.style.display = 'block';
+      }
+    }, 5000); // 5 second timeout
+    
+    // Try to load the iframe
+    try {
+      iframe.style.display = 'block';
+      
+      // Check if iframe loaded successfully after a delay
+      setTimeout(function() {
+        try {
+          // Try to access iframe content (will throw if blocked by CORS/X-Frame-Options)
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+          clearTimeout(loadTimeout);
+        } catch (e) {
+          // Iframe is blocked, show fallback after timeout
+          console.log('Scheduler iframe may be blocked by same-origin policy');
+        }
+      }, 1000);
+    } catch (e) {
+      clearTimeout(loadTimeout);
+      loading.style.display = 'none';
+      iframe.style.display = 'none';
+      fallback.style.display = 'block';
+    }
+  }
+
+  // Global functions for inline handlers
+  window.handleSchedulerLoad = function() {
+    const loading = document.getElementById('scheduler-loading');
+    const iframe = document.getElementById('scheduler-iframe');
+    if (loading) loading.style.display = 'none';
+    if (iframe) iframe.style.display = 'block';
+  };
+
+  window.handleSchedulerError = function() {
+    const loading = document.getElementById('scheduler-loading');
+    const iframe = document.getElementById('scheduler-iframe');
+    const fallback = document.getElementById('scheduler-fallback');
+    if (loading) loading.style.display = 'none';
+    if (iframe) iframe.style.display = 'none';
+    if (fallback) fallback.style.display = 'block';
+  };
+
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       initMobileMenu();
       initSmoothScroll();
+      initScheduler();
     });
   } else {
     initMobileMenu();
     initSmoothScroll();
+    initScheduler();
   }
 
 })();
