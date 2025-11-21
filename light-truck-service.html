@@ -25,15 +25,142 @@
       <div class="page-container">
         <div class="hero-grid">
           <div>
-            <p
-              style="color: rgba(255,255,255,0.95); margin-bottom: var(--spacing-lg); font-size: 1.125rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-              We also provide comprehensive service for medium and heavy-duty commercial trucks, including fleet
-              maintenance
-              programs.</p>
+            <h1>Light Truck & RV Service</h1>
+            <p class="hero-subtitle">Professional service for light trucks, RVs, SUVs, and vans up to Class 6. Fast turnaround with 30+ factory-trained technicians and 25 service bays.</p>
             <div class="btn-group">
-              <a href="heavy-truck-service.html" class="btn btn-white">View Heavy Truck Service</a>
+              <a href="https://www.midwayfordtruck.com/service-appointment.htm" class="btn btn-white">Schedule Service</a>
+              <a href="tel:+18164554240" class="btn btn-white">Call (816) 455-4240</a>
             </div>
           </div>
+          <div>
+            <div class="image-placeholder">
+              Image Placeholder – Light Truck Service Hero
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Hours Section -->
+    <section class="section section-light">
+      <div class="page-container">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h2>Contact Information</h2>
+            <div class="contact-item" style="display: flex; gap: 8px; margin-bottom: 12px;">
+              <strong>Phone:</strong>
+              <a href="tel:+18164554240">(816) 455-4240</a>
+            </div>
+            <div class="contact-item" style="display: flex; gap: 8px; margin-bottom: 12px;">
+              <strong>Toll-Free:</strong>
+              <a href="tel:+18005982285">(800) 598-2285</a>
+            </div>
+            <div class="contact-item" style="display: flex; gap: 8px; margin-bottom: 12px;">
+              <strong>Address:</strong>
+              <span>7601 NE 38th Street, Kansas City, MO 64161</span>
+            </div>
+            <div class="contact-item" style="display: flex; gap: 8px; margin-bottom: 12px;">
+              <strong>Directions:</strong>
+              <a href="https://www.google.com/maps/search/?api=1&query=7601+NE+38th+Street+Kansas+City+MO+64161" target="_blank"
+                rel="noopener">Get Directions</a>
+            </div>
+            <div style="margin-top: var(--spacing-md);">
+              <strong>Service Manager:</strong>
+              <div style="margin-top: 4px;"><a href="mailto:lighttruckservice@midwayfordtruck.com">Email Service Manager</a></div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h2>Service Hours</h2>
+            <div class="hours-row">
+              <span>Monday - Friday</span>
+              <span>6:00 AM - 8:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span>Saturday</span>
+              <span>7:00 AM - 7:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span>Sunday</span>
+              <span>7:00 AM - 7:00 PM</span>
+            </div>
+            <p style="margin-top: var(--spacing-md); color: var(--color-text-muted); font-size: var(--font-size-small);">
+              Open 7 Days Per Week
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Inquiry Form -->
+    <section class="section section-alt">
+      <div class="page-container">
+        <div class="text-center mb-lg">
+          <h2>Request Service</h2>
+          <p class="section-intro" style="max-width: 600px; margin: 0 auto;">Fill out the form below to request service for your light truck, RV, SUV, or van. Our team will contact you to schedule your appointment.</p>
+        </div>
+        <div class="service-form" style="max-width: 800px; margin: 0 auto;">
+          <form action="https://www.midwayfordtruck.com/service-request-handler.htm" method="post">
+            <div class="form-group">
+              <label for="contact-name">Contact Name <span style="color: var(--color-error);">*</span></label>
+              <input type="text" id="contact-name" name="contactName" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Phone Number <span style="color: var(--color-error);">*</span></label>
+              <input type="tel" id="contact-phone" name="contactPhone" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address <span style="color: var(--color-error);">*</span></label>
+              <input type="email" id="contact-email" name="contactEmail" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="vehicle-type">Vehicle Type</label>
+              <select id="vehicle-type" name="vehicleType">
+                <option value="">Select vehicle type</option>
+                <option value="light-truck">Light Truck</option>
+                <option value="rv">RV</option>
+                <option value="suv">SUV</option>
+                <option value="van">Van</option>
+                <option value="class-6">Class 6 Truck</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="service-type">Service Type</label>
+              <select id="service-type" name="serviceType">
+                <option value="">Select a service type</option>
+                <option value="maintenance">Routine Maintenance</option>
+                <option value="oil-change">Oil Change</option>
+                <option value="tire-service">Tire Service</option>
+                <option value="brake-service">Brake Service</option>
+                <option value="diagnostics">Diagnostics</option>
+                <option value="repair">Repair</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="service-notes">Service Needs or Questions</label>
+              <textarea id="service-notes" name="serviceNotes" rows="4"
+                placeholder="Describe your service needs, questions, or specific requirements..."></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Service Request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-link to Heavy Truck Service -->
+    <section class="section"
+      style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: white;">
+      <div class="page-container text-center">
+        <h2 style="color: white; margin-bottom: var(--spacing-md);">Also Need Heavy-Duty Service?</h2>
+        <p
+          style="color: rgba(255,255,255,0.95); margin-bottom: var(--spacing-lg); font-size: 1.125rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          We also provide comprehensive service for medium and heavy-duty commercial trucks, including fleet maintenance programs.</p>
+        <div class="btn-group">
+          <a href="heavy-truck-service.html" class="btn btn-white">View Heavy Truck Service</a>
+        </div>
+      </div>
     </section>
   </main>
 
